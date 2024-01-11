@@ -1,0 +1,13 @@
+diff -up librdkafka-0.11.4/src/rdkafka_conf.c.orig librdkafka-0.11.4/src/rdkafka_conf.c
+--- librdkafka-0.11.4/src/rdkafka_conf.c.orig	2021-11-01 18:29:29.669679125 +0100
++++ librdkafka-0.11.4/src/rdkafka_conf.c	2021-11-01 18:30:21.007126511 +0100
+@@ -468,7 +468,8 @@ static const struct rd_kafka_property rd
+ 	  "encryption, MAC and key exchange algorithm used to negotiate the "
+ 	  "security settings for a network connection using TLS or SSL network "
+ 	  "protocol. See manual page for `ciphers(1)` and "
+-	  "`SSL_CTX_set_cipher_list(3)."
++	  "`SSL_CTX_set_cipher_list(3).",
++	  .sdef = "PROFILE=SYSTEM"
+ 	},
+ 	{ _RK_GLOBAL, "ssl.key.location", _RK_C_STR,
+ 	  _RK(ssl.key_location),
